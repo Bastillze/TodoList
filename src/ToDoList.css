@@ -1,14 +1,44 @@
 #toDoListMain {
-
+    display: block;
     width: 1500px;
     height: 1500px;
-    background-color: grey;
+    background-color: gray;
+    margin-left: 45px;
+
 
 }
 
-#titlesection {
-    width: 100px;
-    height: 100px;
+#titleSection {
+    width: 1200px;
+    height: 150px;
     background-color: purple;
+    float: right;
 
+}
+
+#actualToDoList {
+    width: 1200px;
+    height: 450px;
+    background-color: blue;
+    float: right;
+}
+
+#description {
+    width: 1200px;
+    height: 450px;
+    background-color: red;
+    float: right;
+}
+
+#checkList {
+    width: 1200px;
+    height: 450px;
+    background-color: green;
+    float: right;
+}
+
+#asideSection {
+    width: 350px;
+    height: 1500px;
+    background-color: yellow;
 }
