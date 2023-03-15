@@ -13,6 +13,7 @@
     height: 150px;
     background-color: purple;
     float: right;
+    border-style: solid;
 
 }
 
@@ -21,6 +22,7 @@
     height: 450px;
     background-color: blue;
     float: right;
+    border-style:solid;
 }
 
 #description {
@@ -28,6 +30,7 @@
     height: 450px;
     background-color: red;
     float: right;
+    border-style:solid;
 }
 
 #checkList {
@@ -35,10 +38,12 @@
     height: 450px;
     background-color: green;
     float: right;
+    border-style:solid;
 }
 
 #asideSection {
     width: 350px;
-    height: 1500px;
+    height: 1515px;
     background-color: yellow;
+    border-style:solid;
 }
