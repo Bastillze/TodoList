@@ -14,8 +14,8 @@ define("toDoList",
     }
    }
 
-    toDo = prompt("What do you want to do?");
-   if(thing = String){
+   let toDo = prompt("What do you want to do?");
+   if(toDo = String){
     toDo.push(newThing);
    }
 
