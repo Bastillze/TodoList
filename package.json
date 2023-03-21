@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "date-fns": "^2.29.3",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "requirejs": "^2.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
