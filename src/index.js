@@ -1,4 +1,4 @@
-define("toDoList", [ToDoList, Description, Checklist], function () {
+define("toDoList", ["ToDoListDescription", "Checklist"], function () {
   "use strict";
   let toDoList = document.getElementById("actualToDoList");
 
@@ -11,20 +11,25 @@ define("toDoList", [ToDoList, Description, Checklist], function () {
     }
   }
 
-  let toDo = prompt("What do you want to do?");
+  let toDoQuestion = prompt("What do you want to do?");
   if ((thing = String)) {
     toDo.push(newThing);
   }
 
   document.appendChild("actualToDoList");
-})();
+});
 
 requirejs.config({
   baseUrl: "src",
   paths: {
-    description: "ToDoListDescription.js",
-    duedate: "ToDoListDueDate.js",
-    notes: "ToDoListNotes.js",
-    priority: "ToDoListPriorit.js",
+    description: "ToDoListDescription",
+    duedate: "ToDoListDueDate",
+    notes: "ToDoListNotes",
+    priority: "ToDoListPriorit",
   },
 });
+
+require(["ToDoListDescription", "Checklist"], function (
+  ToDoListDescription,
+  Checklist
+) {});

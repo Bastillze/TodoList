@@ -1,10 +1,10 @@
-let description =(function () { 
-  'use strict'
+let description = (function () {
+  "use strict";
 
-  this.taskDescription=()=>console.log("");
-  this.newTask=()=>console.log("New Task");
+  function newTask() {
+    return console.log("New Task");
+  }
   //input for putting a new task goes here//
-  this,deleteTask=()=>console.log('Delete Task');
+  let newDescription = prompt;
   //input for deleting a task goes here//
-
 })();
