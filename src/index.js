@@ -1,22 +1,42 @@
 define("toDoList", ["ToDoListDescription", "Checklist"], function () {
   "use strict";
-  let toDoList = document.getElementById("actualToDoList");
 
-  this.thingsDone = () => console.log("What I've Done");
-  this.thingsToDo = () => console.log("What to do today?");
+  class Model {
+    constructor() {
+      this.todos = [
+        { id: 1, text: "Run a marathon", complete: false },
+        {
+          id: 2,
+          text: "join a fighting game tournament",
+          complete: false,
+        },
+      ]
+    
+    addTodo(todoText) {
+      const todo = {
+        id: this.todos.length > 0 ? this.todos[this.todos.length - 1].id + 1 : 1,
+        text: todoText,
+        complete: false,
+      }
+    }
 
-  function toDo() {
-    if (thing != thingsDone) {
-      thing.push(thingsToDo);
+     this.todos.push(todo)
+
     }
   }
 
-  let toDoQuestion = prompt("What do you want to do?");
-  if ((thing = String)) {
-    toDo.push(newThing);
+  class View {
+    constructor() {}
   }
 
-  document.appendChild("actualToDoList");
+  class Controller {
+    constructor(model, view) {
+      this.model = model;
+      this.view = view;
+    }
+  }
+
+  const app = new Controller(new Model(), new View());
 });
 
 requirejs.config({
