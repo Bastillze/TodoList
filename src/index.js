@@ -9,9 +9,8 @@ define("toDoList", ["ToDoListDescription", "Checklist"], function () {
           complete: false,
         },
       ];
-
-      addTodo(todoText);
-      {
+    }
+      addTodo(todoText) {
         const todo = {
           id:
             this.todos.length > 0
@@ -24,8 +23,7 @@ define("toDoList", ["ToDoListDescription", "Checklist"], function () {
 
       this.todos.push(todo);
 
-      editTodo(id, updatedText);
-      {
+      editTodo(id, updatedText) {
         this.todos = this.todos.map((todo) =>
           todo.id === id
             ? { id: todo.id, text: updatedText, complete: todo.complete }
@@ -33,13 +31,11 @@ define("toDoList", ["ToDoListDescription", "Checklist"], function () {
         );
       }
 
-      deleteTodo(id);
-      {
+      deleteTodo(id) {
         this.todos = this.todos.filter((todo) => todo.id !== id);
       }
 
-      toggleTodo(id);
-      {
+      toggleTodo(id) {
         this.todos = this.todos.map((todo) =>
           todo.id === id
             ? { id: todo.id, text: todo.text, complete: !todo.complete }
@@ -47,7 +43,7 @@ define("toDoList", ["ToDoListDescription", "Checklist"], function () {
         );
       }
     }
-  }
+  
 
   class View {
     constructor() {}
