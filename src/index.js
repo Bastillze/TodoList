@@ -49,7 +49,17 @@ define("toDoList", ["ToDoListDescription", "Checklist"], function () {
   
 
   class View {
-    constructor() {}
+    constructor() {
+
+    this.app = this.getElement('#root')
+
+    this.title = this.createElement('h3')
+    this.title.textContent = 'Todos'
+
+    this.form = this.createElement('form')
+
+
+    }
 
     createElement(tag, className) {
       const element = document.createElement(tag);
