@@ -18,10 +18,13 @@ define("toDoList", ["ToDoListDescription", "Checklist"], function () {
               : 1,
           text: todoText,
           complete: false,
-        };
+        }
+
+        this.todos.push(todo);
+
       }
 
-      this.todos.push(todo);
+      
 
       editTodo(id, updatedText) {
         this.todos = this.todos.map((todo) =>
