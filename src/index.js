@@ -23,26 +23,29 @@ define("toDoList", ["ToDoListDescription", "Checklist"], function () {
       }
 
       this.todos.push(todo);
-    }
 
-    editTodo(id, updatedText) {
-      this.todos = this.todos.map((todo) =>
-        todo.id === id
-          ? { id: todo.id, text: updatedText, complete: todo.complete }
-          : todo
-      );
-    }
+      editTodo(id, updatedText);
+      {
+        this.todos = this.todos.map((todo) =>
+          todo.id === id
+            ? { id: todo.id, text: updatedText, complete: todo.complete }
+            : todo
+        );
+      }
 
-    deleteTodo(id) {
-      this.todos = this.todos.filter((todo) => todo.id !== id);
-    }
+      deleteTodo(id);
+      {
+        this.todos = this.todos.filter((todo) => todo.id !== id);
+      }
 
-    toggleTodo(id) {
-      this.todos = this.todos.map((todo) =>
-        todo.id === id
-          ? { id: todo.id, text: todo.text, complete: !todo.complete }
-          : todo
-      );
+      toggleTodo(id);
+      {
+        this.todos = this.todos.map((todo) =>
+          todo.id === id
+            ? { id: todo.id, text: todo.text, complete: !todo.complete }
+            : todo
+        );
+      }
     }
   }
 
