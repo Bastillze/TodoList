@@ -1,4 +1,4 @@
-define("toDoList", ["ToDoListDescription", "Checklist"], function () {
+define("toDoList", [], function (require) {
   class Model {
     constructor() {
       this.todos = [
@@ -58,6 +58,19 @@ define("toDoList", ["ToDoListDescription", "Checklist"], function () {
 
     this.form = this.createElement('form')
 
+    this.input = this.createElement('input')
+    this.input.type = 'text'
+    this.input.placeholder = 'Add todo'
+    this.input.name = 'todo'
+
+    this.submitButton = this.createElement('button')
+    this.submitButton.textContent = 'Submit'
+
+    this.todoList = this.createElement('ul', 'todo-list')
+
+    this.form.append(this.input, this.submitButton)
+
+    this.app.append(this.title, this.form, this.todoList)
 
     }
 
@@ -83,19 +96,20 @@ define("toDoList", ["ToDoListDescription", "Checklist"], function () {
   }
 
   const app = new Controller(new Model(), new View());
+
+  return todoList;
 });
 
 requirejs.config({
-  baseUrl: "src",
+  baseUrl: "src/index",
   paths: {
-    description: "ToDoListDescription",
-    duedate: "ToDoListDueDate",
-    notes: "ToDoListNotes",
-    priority: "ToDoListPriorit",
+   
+    index: '../index'
+
   },
 });
 
-require(["ToDoListDescription", "Checklist"], function (
-  ToDoListDescription,
-  Checklist
-) {});
+require(["index"], function (require) {
+
+ 
+});
