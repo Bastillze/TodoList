@@ -1,4 +1,4 @@
-define("toDoList", [], function (require) {
+define(function(require) {
   class Model {
     constructor() {
       this.todos = [
@@ -97,7 +97,7 @@ define("toDoList", [], function (require) {
 
   const app = new Controller(new Model(), new View());
 
-  return todoList;
+  
 });
 
 requirejs.config({
