@@ -6,14 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDoList</title>
     <link rel="stylesheet" href="src/ToDoList.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   </head>
   <body>
     
-     
+     <main class="app">
+       <h1>My Todo List</h1>
 
-      <div id="root"></div>
+        <div class="input-header">
+          <h1><span id="date"></span></h1>
 
-    <script data-main="src/index.js" src="node_modules/requirejs/require.js"></script>
+         <div class="to-do-input">
+            <input type="text" id="item" placeholder="Enter a task..."><button id ="enter">Enter</button>
+         </div>
+        </div>
+
+        <div class="to-do-list"></div>
+
+
+     </main>
+
+      
+
+    <script src="src/index.js"></script>
     
+</div>
+
   </body>
 </html>
